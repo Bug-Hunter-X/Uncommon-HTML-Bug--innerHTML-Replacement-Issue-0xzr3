@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    const myDiv = document.getElementById("myDiv");
+    myDiv.innerHTML = ""; //clear the content
+    const para1 = document.createElement("p");
+    para1.textContent = "This text replaces the div content.";
+    myDiv.appendChild(para1);
+    const para2 = document.createElement("p");
+    para2.textContent = "This is another paragraph.";
+    myDiv.appendChild(para2);
+  </script>
+</body>
+</html>
